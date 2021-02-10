@@ -100,6 +100,7 @@ let doctor = {
         let patients = this.cabinet[0];
         console.log(`${patients.nom} a été diagnostiquer.`)
         console.log(`${patients.nom} est sortie du cabinet.`)
+        console.log(`${patients.nom} ce rend compte que ses problemes ne sont pas encore fini`);
         this.cabinet.splice(this.cabinet.indexOf(patients))
         this.salle.personnes.push(patients)
     }
@@ -116,7 +117,7 @@ let pharmacie = {
     nom: "pharmacie",
     argent: 0,
     personnes: [],
-    caret(patients) {
+    methodetraitement(patients) {
         let care;
         switch (patients.traitement) {
             case t1:
@@ -161,5 +162,5 @@ do {
     doctor.diagnostique(x)
     doctor.patientOut()
     x.goTo(doctor.salle, pharmacie)
-    pharmacie.caret(x)
+    pharmacie.methodetraitement(x)
 } while (doctor.salle.personnes.length > 0);
