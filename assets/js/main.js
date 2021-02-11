@@ -55,13 +55,13 @@ let p3 = new Malades ('Sangoku', '404', 80, 'vide', 'malade', '');
 let p4 = new Malades ('Darthvader', 'azmatique', 110, 'vide', 'malade', '');
 let p5 = new Malades ('Semicolon', 'syntaxError', 60, 'vide', 'malade', '');
 
-// Instance salle d'attente
+// Objet salle d'attente
 let salleDattente = {
     nom: "salle d'attente",
     personnes: [p1, p2, p3, p4, p5]
 }
 
-// Instance Doctor
+// Objet Doctor
 
 let doctor = {
     nom: "Dr Oetker",
@@ -106,13 +106,13 @@ let doctor = {
     }
 }
 
-// Instance cimetiere
+// Objet cimetiere
 let cimetiere = {
     nom: "Cimetière",
     personnes: []
 }
 
-// Intances pharmacie
+// Objet pharmacie
 let pharmacie = {
     nom: "pharmacie",
     argent: 0,
@@ -155,6 +155,7 @@ let pharmacie = {
     }
 }
 
+//boucles
 do {
     let x = doctor.salle.personnes[0]
     doctor.patientIn()
